@@ -1,5 +1,6 @@
 package tutorial.tutorialspring.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import tutorial.tutorialspring.domin.Member;
 import tutorial.tutorialspring.repository.MemberRepository;
 import tutorial.tutorialspring.repository.MemoryMemberRepository;
@@ -11,7 +12,7 @@ import java.util.Optional;
 public class MemberService {
 
     private final MemberRepository memberRepository;
-
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
