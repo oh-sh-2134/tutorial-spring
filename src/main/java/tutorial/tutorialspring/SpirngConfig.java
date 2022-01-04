@@ -3,6 +3,7 @@ package tutorial.tutorialspring;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tutorial.tutorialspring.repository.JdbcMemberRepository;
+import tutorial.tutorialspring.repository.JdbcTemplateMemberRepository;
 import tutorial.tutorialspring.repository.MemberRepository;
 import tutorial.tutorialspring.repository.MemoryMemberRepository;
 import tutorial.tutorialspring.service.MemberService;
@@ -26,6 +27,7 @@ public class SpirngConfig {
     @Bean
     public MemberRepository memberRepository(){
         //return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
